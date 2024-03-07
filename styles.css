@@ -21,7 +21,7 @@ h1 {
     margin-bottom: 25px;
 }
 
-textarea, input, button {
+textarea, input, button, div {
     display: block;
     width: 90%;
     margin-bottom: 10px;
