@@ -9,7 +9,7 @@ A cifra de César é um dos métodos de criptografia mais simples e conhecidos. 
 ## Funcionalidades
 
 - Cifragem de mensagens utilizando a cifra de César.
-- Decifragem de mensagens cifradas usando a cifra de César.
+- Decifragem de mensagens cifradas utilizando a cifra de César.
 - Suporte a letras maiúsculas e minúsculas, números (0-9) e os seguintes caracteres especiais: '.', ',', '?', '!'.
 - Brute force na cifra de César, mostrando todas as possibilidades de decifragem. 🔍
 
