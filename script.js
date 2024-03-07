@@ -25,11 +25,11 @@ function caesarCipher(str, shift) {
             else if (code >= 97 && code <= 122) {
                 code = ((code - 97 + shift) % 26 + 26) % 26 + 97;
             }
-          
+
             else if (code >= 48 && code <= 57) {
                 code = ((code - 48 + shift) % 10 + 10) % 10 + 48;
             }
-          
+
             else if (code >= 32 && code <= 126) {
                 code = ((code - 32 + shift) % 95 + 95) % 95 + 32;
             }
@@ -37,4 +37,21 @@ function caesarCipher(str, shift) {
             return String.fromCharCode(code);
         })
         .join('');
+}
+
+function bruteForce(message) {
+    const possibleMessages = [];
+
+    for (let shift = 1; shift <= 25; shift++) {
+        const decryptedMessage = caesarCipher(message, -shift);
+        possibleMessages.push(`Deslocamento ${shift}: ${decryptedMessage}`);
+    }
+
+    return possibleMessages;
+}
+
+function showBruteForce() {
+    const message = document.getElementById('message').value;
+    const bruteForceResults = bruteForce(message);
+    document.getElementById('result').innerText = bruteForceResults.join('\n');
 }
